@@ -1,0 +1,8 @@
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3.iOS\obj\iPhoneSimulator\Debug\LEPPE3.iOS.csprojAssemblyReference.cache
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3.iOS\obj\iPhoneSimulator\Debug\LEPPE3.iOS.csproj.CoreCompileInputs.cache

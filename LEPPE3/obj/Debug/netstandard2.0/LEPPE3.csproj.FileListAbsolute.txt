@@ -1,0 +1,13 @@
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\LEPPE3.csprojAssemblyReference.cache
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\Carte.xaml.g.cs
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\EquipePage.xaml.g.cs
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\InscriptionPage.xaml.g.cs
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\JoueurInCarte.xaml.g.cs
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\listeJoueursInEquipe.xaml.g.cs
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\LEPPE3.csproj.CoreCompileInputs.cache
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\LEPPE3.AssemblyInfoInputs.cache
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\obj\Debug\netstandard2.0\LEPPE3.AssemblyInfo.cs
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\bin\Debug\netstandard2.0\LEPPE3.deps.json
+C:\Users\fpozzi\source\repos\LEPPE3\LEPPE3\LEPPE3\bin\Debug\netstandard2.0\LEPPE3.dll
