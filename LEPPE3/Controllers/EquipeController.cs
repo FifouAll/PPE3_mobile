@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using API_Pozzi;
+using LEPPE3.Models;
+using Newtonsoft.Json;
+//using API_Pozzi;
 using MySql.Data.MySqlClient;
 
 namespace API_Pozzi.controller
