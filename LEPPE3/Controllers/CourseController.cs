@@ -13,6 +13,8 @@ namespace LEPPE3.Controllers
 {
     public class CourseController
     {
+        
+        //création course
         [HttpPost]
         public HttpResponseMessage AddCourse([FromBody] Course c)
         {
@@ -22,6 +24,7 @@ namespace LEPPE3.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest, c);
         }
 
+        //affichage de toutes les courses
         [HttpGet]
         public IEnumerable<Course> GetAllC()
         {
@@ -30,6 +33,7 @@ namespace LEPPE3.Controllers
             return lesCourses.ToList();
         }
 
+        //mise à jour des courses
         [HttpPut]
         public string UpdateCourse(string depart_course, string fin_course, string lieu_course, string nom_course)
         {
@@ -39,6 +43,7 @@ namespace LEPPE3.Controllers
 
         }
 
+        //effacement des courses
         [HttpDelete]
         public string DeleteCourse(string nom_course)
         {
