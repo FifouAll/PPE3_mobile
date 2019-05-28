@@ -71,13 +71,4 @@ namespace API_Pozzi.controller
             {
                 return "Erreur, ressaisir vos informations";
         }
-
-        /*localisation
-        [HttpPost]
-        public HttpResponseMessage LocaliserParticipants(string longitude, string latitude)
-        {
-
-        }*/
-
-    }
 }
