@@ -1,82 +1,90 @@
+﻿using contactAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-//using API_Pozzi;
-//using contactAPI;
-//using API_Pozzi.controller;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
-using LEPPE3.Models;
 
-
-namespace API_Pozzi.controller
+namespace contactAPI.Controllers
 {
-//ajout participant
-    public class ParticipantController
+    public class ParticipantController : ApiController
+    {
         [HttpPost]
         public HttpResponseMessage AddParticipant([FromBody] Participant p)
         {
+
+            ContactDAO dao = new ContactDAO();
             if (p != null)
+            {
+                dao.createParticipant(p);
                 return Request.CreateResponse(HttpStatusCode.Created, p);
+            }
             else
                 return Request.CreateResponse(HttpStatusCode.BadRequest, p);
         }
-    //ajout participant dans équipe
-    public List<Participant> ListeParticipant (*********)
-    {
-        unParticipant = new Participant (*****);
-        ListeParticipant.Add(unParticipant); 
-    }
-    return ListeParticipant;
-    
 
-    //obtenir participant par id
+       
+
         [HttpGet]
-        public Participant GetById(long id)
+        public Participant GetById(int id)
         {
             ContactDAO dao = new ContactDAO();
-            List<Participant> lesParticipants = dao.getAllParticipants();
-            return lesParticipants.ElementAt(0);
+            Participant p = dao.getParticipantById(id);
+            return p; 
         }
 
-    //obtenir tous les participants
         [HttpGet]
-        public IEnumerable<Participant> GetAllP()
+        public IEnumerable<Participant> GetAll()
         {
             ContactDAO dao = new ContactDAO();
             List<Participant> lesParticipants = dao.getAllParticipants();
             return lesParticipants.ToList();
         }
 
-        //effacer l'id du participant
+        [HttpGet]
+        public IEnumerable<Participant> GetEquipies(int idEquipe)
+        {
+            ContactDAO dao = new ContactDAO();
+            List<Participant> lesParticipants = dao.getEquipies(idEquipe);
+            return lesParticipants.ToList();
+        }
+
 
         [HttpDelete]
-        public string DeleteParticipants(string id)
+        public string DeleteParticipant(int id)
         {
+            ContactDAO dao = new ContactDAO();
+            dao.deleteParticipant(id);
             return "Participant supprimé id " + id;
+
         }
 
-    //modification participant
         [HttpPut]
-        public string UpdateParticipant(string id, string pwd, string nom, string prenom, string mail, int age, string telephone, string sexe, string id_equipe)
+        public string UpdateParticipant(int id, string nom)
         {
-            return "Mise à jour de l'équipe avec l'id " + id + " , le nom" + nom + " ,le prénom" + prenom + " /n " + " , l'email" + mail + " ,l'age : " + age + " /n" + "le numéro de téléphone:" + telephone +
-                " le sexe: " + sexe + "et l'id de l'équipe est :" + id_equipe;
+            ContactDAO dao = new ContactDAO();
+            dao.updateParticipant(id, nom);
+            return "Mise à jour du participant avec le nom " + nom + " et l'id " + id;
+
         }
 
-        //se loguer
-        [HttpPost]
-        public HttpResponseMessage LoguerParticipant(string nom2, string pwd2)
+        [HttpPut]
+        public string UpdateParticipant(int id, string nom, string prenom, string email, string numero, string sexe)
         {
-            if(nom2 == Nom && pwd2 == PWD)
-            {
-                return " page suivante";
-            }
-            else
-            {
-                return "Erreur, ressaisir vos informations";
+            ContactDAO dao = new ContactDAO();
+            dao.updateParticipant(id, nom, prenom, email, numero, sexe);
+            return "Mise à jour du participant avec le nom " + nom + " et l'id " + id;
+
         }
+
+        [HttpPut]
+        public string AttribuerEquipe(int idParticipant, int idEquipe)
+        {
+            ContactDAO dao = new ContactDAO();
+            dao.attribuerEquipe(idParticipant, idEquipe);
+            return "Mise à jour du participant avec l'équipe " + idEquipe;
+
+        }
+    }
 }
