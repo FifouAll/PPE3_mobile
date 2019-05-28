@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using Newtonsoft.Json;
+using LePPE3.Models;
 //using API_Pozzi;
 //using MySql.Data.MySqlClient;
 
