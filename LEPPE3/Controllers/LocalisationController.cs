@@ -6,11 +6,14 @@ using System.Net.Http;
 using System.Web.Http;
 using API_Pozzi;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using LEPPE3.Models;
 
 namespace API_Pozzi
 {
     public class LocalisationController
     {
+        //ajout participant
         [HttpPost]
         public HttpResponseMessage AddEquipe([FromBody] Localisation l)
         {
@@ -20,6 +23,8 @@ namespace API_Pozzi
                 return Request.CreateResponse(HttpStatusCode.BadRequest, l);
         }
 
+        
+        //localisation des participants
         [HttpGet]
         public IEnumerable<Participant> GetAllL()
         {
@@ -28,6 +33,7 @@ namespace API_Pozzi
             return lesParticipants.ToList();
         }
 
+            //suppression participant
 
         [HttpDelete]
         public string DeleteLocalisation(string id_localisation)
@@ -35,6 +41,7 @@ namespace API_Pozzi
             return "Equipe supprimée id " + id_localisation;
         }
 
+        //modification participant
         [HttpPut]
         public string UpdateLocalisation(string id_localisation, string date_actuelle, string temps_reel, string longitude, string latitude, string id)
         {
