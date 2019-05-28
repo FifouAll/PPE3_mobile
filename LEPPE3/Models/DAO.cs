@@ -44,7 +44,11 @@ namespace ApiOrientation.Models
         return getAllParticipantEquipe;
       }
       
-      //ajouter participant dans Equipe
+    //récupération des coordonnées
+    {
+        
+        
+    }
       
       
           
