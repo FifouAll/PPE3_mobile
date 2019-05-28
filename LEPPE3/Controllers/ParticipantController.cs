@@ -24,6 +24,14 @@ namespace API_Pozzi.controller
             else
                 return Request.CreateResponse(HttpStatusCode.BadRequest, p);
         }
+    //ajout participant dans équipe
+    public List<Participant> ListeParticipant (*********)
+    {
+        unParticipant = new Participant (*****);
+        ListeParticipant.Add(unParticipant); 
+    }
+    return ListeParticipant;
+    
 
     //obtenir participant par id
         [HttpGet]
