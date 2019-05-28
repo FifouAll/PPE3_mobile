@@ -1,17 +1,20 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using API_Pozzi;
-using contactAPI;
-using API_Pozzi.controller;
+//using API_Pozzi;
+//using contactAPI;
+//using API_Pozzi.controller;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using LEPPE3.Models;
 
 
 namespace API_Pozzi.controller
 {
+//ajout participant
     public class ParticipantController
         [HttpPost]
         public HttpResponseMessage AddParticipant([FromBody] Participant p)
@@ -22,6 +25,7 @@ namespace API_Pozzi.controller
                 return Request.CreateResponse(HttpStatusCode.BadRequest, p);
         }
 
+    //obtenir participant par id
         [HttpGet]
         public Participant GetById(long id)
         {
@@ -30,6 +34,7 @@ namespace API_Pozzi.controller
             return lesParticipants.ElementAt(0);
         }
 
+    //obtenir tous les participants
         [HttpGet]
         public IEnumerable<Participant> GetAllP()
         {
@@ -38,6 +43,7 @@ namespace API_Pozzi.controller
             return lesParticipants.ToList();
         }
 
+        //effacer l'id du participant
 
         [HttpDelete]
         public string DeleteParticipants(string id)
@@ -45,6 +51,7 @@ namespace API_Pozzi.controller
             return "Participant supprimé id " + id;
         }
 
+    //modification participant
         [HttpPut]
         public string UpdateParticipant(string id, string pwd, string nom, string prenom, string mail, int age, string telephone, string sexe, string id_equipe)
         {
@@ -53,17 +60,17 @@ namespace API_Pozzi.controller
         }
 
         //se loguer
-        /*[HttpPost]
+        [HttpPost]
         public HttpResponseMessage LoguerParticipant(string nom2, string pwd2)
         {
-            if(nom2 == Nom && pwd == PWD)
+            if(nom2 == Nom && pwd2 == PWD)
             {
                 return " page suivante";
             }
             else
             {
                 return "Erreur, ressaisir vos informations";
-        }*/
+        }
 
         /*localisation
         [HttpPost]
