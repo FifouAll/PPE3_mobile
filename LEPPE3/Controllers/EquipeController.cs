@@ -13,6 +13,7 @@ namespace API_Pozzi.controller
 {
     public class EquipeController
     {
+        //ajout équipe
         [HttpPost]
         public HttpResponseMessage AddEquipe([FromBody] Equipe e)
         {
@@ -22,6 +23,7 @@ namespace API_Pozzi.controller
                 return Request.CreateResponse(HttpStatusCode.BadRequest, e);
         }
 
+        //affichage des équipes par Id
         [HttpGet]
         public Equipe GetById(long id_equipe)
         {
@@ -30,6 +32,7 @@ namespace API_Pozzi.controller
             return lesEquipes.ElementAt(0);
         }
 
+        //affichage de toutes les équipes
         [HttpGet]
         public IEnumerable<Equipe> GetAllE()
         {
@@ -39,12 +42,14 @@ namespace API_Pozzi.controller
         }
 
 
+        //effacement de l'équipe
         [HttpDelete]
         public string DeleteEquipe(string id_equipe)
         {
             return "Equipe supprimée id " + id_equipe;
         }
 
+        //mise à jour de l'équipe
         [HttpPut]
         public string UpdateEquipe(string id_equipe, string nom_equipe, string couleur_equipe)
         {
