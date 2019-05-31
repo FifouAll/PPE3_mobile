@@ -7,7 +7,8 @@ using System.Web.Http;
 using API_Pozzi;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
-using LEPPE3.Models;
+//using LEPPE3.Models;
+using contactAPI.Models;
 
 namespace API_Pozzi
 {
