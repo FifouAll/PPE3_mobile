@@ -14,7 +14,8 @@ namespace contactAPI
         public ContactDAO()
         {
             string myConnectionString;
-            myConnectionString = "server=172.19.0.27;uid=sio;pwd=0550002D;database=ContactAPI;";
+            //myConnectionString = "server=172.19.0.27;uid=sio;pwd=0550002D;database=ContactAPI;";
+            myConnectionString = "server=172.19.0.2;uid=sio;pwd=0550002D;database=ContactAPI;";
             conn = new MySql.Data.MySqlClient.MySqlConnection();
             conn.ConnectionString = myConnectionString;
             conn.Open();
